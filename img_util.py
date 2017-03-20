@@ -8,7 +8,7 @@ def gaussian_stack(image):
     """
     max_sigma = max(image.shape[0], image.shape[1])
     sigma = 1
-    result = []
+    result = [image]
     while sigma <= max_sigma:
         result.append(scipy.ndimage.gaussian_filter(image, sigma))
         sigma *= 2
